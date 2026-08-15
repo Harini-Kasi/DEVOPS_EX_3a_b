@@ -1,0 +1,90 @@
+/* ============================================================
+   SETTINGS PAGE (new — theme + font size only)
+   Reuses the same tokens/patterns as the rest of the app
+   (card, panel-header, filter-item) so it matches the UI.
+   ============================================================ */
+.settings-section {
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.settings-section h3 {
+  font-size: 1.1rem;
+  color: var(--navy-900);
+  margin-bottom: 0.35rem;
+}
+
+.settings-section .settings-desc {
+  color: var(--ink-400);
+  font-size: 0.85rem;
+  margin-bottom: 1.1rem;
+}
+
+.settings-option-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.settings-choice-btn {
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  color: var(--ink-900);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.settings-choice-btn:hover {
+  border-color: var(--navy-600);
+}
+
+.settings-choice-btn.active {
+  background: var(--navy-800);
+  border-color: var(--navy-800);
+  color: var(--gold-100);
+}
+
+.theme-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--navy-700);
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.theme-switch.is-dark {
+  background: var(--gold-500);
+}
+
+.theme-switch .switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.18s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-switch.is-dark .switch-knob {
+  transform: translateX(24px);
+}
+
+.theme-toggle-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-900);
+}

@@ -1,0 +1,65 @@
+/* ============================================================
+   Theme & Font-Size overrides (added for Settings page only)
+   Dark mode remaps the same CSS variable tokens used throughout
+   style.css, so every existing component picks up the change
+   automatically with no per-component edits.
+   Font size is applied by scaling the root font-size, since the
+   whole stylesheet is written in rem units.
+   ============================================================ */
+
+html[data-theme="dark"] {
+  --navy-900: #0a1120;
+  --navy-800: #0f1a30;
+  --navy-700: #16233f;
+  --navy-600: #24365f;
+  --gold-500: #c9a227;
+  --gold-400: #dfb948;
+  --gold-100: #3a3419;
+
+  --paper: #12151d;
+  --paper-card: #1a1e29;
+  --ink-900: #eceef3;
+  --ink-600: #b7bccb;
+  --ink-400: #838a9d;
+  --line: #2b3040;
+
+  --success: #4bbf8d;
+  --success-bg: #163227;
+  --error: #e0685a;
+  --error-bg: #3a1c19;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="dark"] body {
+  background: var(--paper);
+  color: var(--ink-900);
+}
+
+html[data-theme="dark"] .field-group input,
+html[data-theme="dark"] .field-group select,
+html[data-theme="dark"] .sq-field select,
+html[data-theme="dark"] .sq-field textarea,
+html[data-theme="dark"] .qc-row textarea,
+html[data-theme="dark"] .qc-row input,
+html[data-theme="dark"] .filter-item select,
+html[data-theme="dark"] .option-row {
+  color: var(--ink-900);
+}
+
+html[data-theme="dark"] .field-group input:focus,
+html[data-theme="dark"] .field-group select:focus,
+html[data-theme="dark"] .sq-field select:focus,
+html[data-theme="dark"] .sq-field textarea:focus,
+html[data-theme="dark"] .qc-row textarea:focus,
+html[data-theme="dark"] .qc-row input:focus {
+  background: var(--paper-card);
+}
+
+/* Font size scaling: whole app is written in rem, so scaling the
+   html root font-size scales every dimension proportionally. */
+html[data-fontsize="small"] { font-size: 14px; }
+html[data-fontsize="medium"] { font-size: 16px; }
+html[data-fontsize="large"] { font-size: 18px; }
